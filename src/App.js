@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Nav from "./component/Nav";
 import ThemeButtons from "./component/ThemeButtons";
 import { THEMES } from "./Config";
 
@@ -16,26 +17,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-primary text-center" data-theme={theme}>
-      <div className="navbar bg-base-100">
-        <div className="flex-1">
-          <button 
-            className="btn btn-secondary" 
-            onClick={changeTheme}
-          >
-            Change Theme
-          </button>
-        </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal p-0">
-            <li>
-              <a href="https://daisyui.com/docs/themes/">DaisyUI</a>
-            </li>
-            <li>
-              <a href="https://github.com/devmegan/theme-switch">Repo</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <Nav changeTheme={changeTheme} />
       <div className="hero min-h-screen bg-base-300">
         <div className="text-center hero-content">
           <div className="max-w-md">
