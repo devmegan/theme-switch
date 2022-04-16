@@ -5,6 +5,7 @@ export default function ThemeButtons({ themes, setTheme }) {
             <button 
                 className="btn btn-sm btn-primary" 
                 data-theme={theme}
+                key={theme}
                 onClick={() => setTheme(theme)}
             >
                 {theme}
