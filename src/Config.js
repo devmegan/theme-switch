@@ -29,4 +29,8 @@ const THEMES = [
     'wireframe',
 ];
 
-export { THEMES };
+const HREFS = {
+    daisyui: 'https://daisyui.com/docs/themes/',
+    repo: 'https://github.com/devmegan/theme-switch',
+}
+export { THEMES, HREFS };
