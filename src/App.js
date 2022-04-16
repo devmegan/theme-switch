@@ -1,46 +1,17 @@
 import { useState } from "react";
+import ThemeButtons from "./component/ThemeButtons";
+import { THEMES } from "./Config";
 
 export default function App() {
 
   const [theme, setTheme] = useState('retro');
 
-  const themes = [
-    'acid',
-    'aqua',
-    'black',
-    'buisness',
-    'bumblebee',
-    'cmyk',
-    'coffee',
-    'corporate',
-    'cupcake',
-    'cyberpunk',
-    'dark',
-    'dracula',
-    'emerald',
-    'fantasy',
-    'forest',
-    'garden',
-    'halloween',
-    'lemonade',
-    'light',
-    'lowfi',
-    'luxury',
-    'night',
-    'pastel',
-    'retro',
-    'synthwave',
-    'valentine',
-    'winter',
-    'wireframe',
-  ];
-
   const changeTheme = () => {
-    let rand = Math.floor(Math.random() * themes.length);
-    if (themes[rand] === theme) {
+    let rand = Math.floor(Math.random() * THEMES.length);
+    if (THEMES[rand] === theme) {
       rand++;
     }
-    setTheme(themes[rand]);
+    setTheme(THEMES[rand]);
   }
 
   return (
@@ -74,6 +45,7 @@ export default function App() {
           </div>
         </div>
       </div>
+      <ThemeButtons setTheme={setTheme} themes={THEMES} />
     </div>
   )
 }
